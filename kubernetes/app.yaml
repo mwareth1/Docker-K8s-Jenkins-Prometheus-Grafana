@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-k8s12
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: project-k8s12
+  template:
+    metadata:
+      labels:
+        app: project-k8s12
+    spec:
+      containers:
+        - name: project-k8s12
+          image: 3booda24/nodejs30
+          ports:
+            - containerPort: 3000
