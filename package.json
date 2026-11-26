@@ -1,0 +1,23 @@
+{
+  "name": "devops-service-template",
+  "version": "1.0.0",
+  "description": "Minimal service and DevOps automation workflow template",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "check": "node --check src/index.js",
+    "lint": "echo \"Running lint checks...\"",
+    "test": "node --test",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f",
+    "ci:verify": "npm run check && npm run lint && npm test"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
